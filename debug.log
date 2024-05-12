@@ -1,0 +1,5 @@
+BEGINNING OF LOG FILE AT TIME 2024-05-09 18:17:44.867247
+loggerDebug: logger module activated. 
+
+------------------------------
+ManLog-FILE: this logs to the file directly. (if enabled)
