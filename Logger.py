@@ -4,7 +4,7 @@ import time
 
 class Logging:
     def __init__(self, allowLogging: bool = False):
-        """main class for the Logging module. "allowLogging"'s boolean value determines if logging is enabled or disabled. The status() function runs anyway."""
+        """main class for the Logging module. allowLogging's boolean value determines if logging is enabled or disabled. The status() function runs anyway."""
         if os.path.exists("debug.log"):
             self.debugFileExists = True
         else: 
@@ -27,21 +27,22 @@ class Logging:
                 os.remove('debug.log')
             print("logging is disabled.")
         
-    class print():
+    class print:
         def __init__(self):
-            super().__init__()
-        def INFO(message):
-            print(f"\033[37mINFO: {message}\033[0m")
+            pass
             
+        def INFO(message):
+            print(f"\033[37m[INFO]: {message}\033[0m")
+        
         def WARNING(message):
-            print(f"\033[33mWARNING: {message}\033[0m")
+            print(f"\033[33m[WARNING]: {message}\033[0m")
             
         def ERROR(message):
-            print(f"\033[38;5;208mERROR: {message}\033[0m")
+            print(f"\033[38;5;208m[ERROR]: {message}\033[0m")
             
         def CRITICAL(message):
-            print(f"\033[31mCRITICAL: {message}\033[0m")
-    
+            print(f"\033[31m[CRITICAL]: {message}\033[0m")
+            
     def FunctionSuccess(self, func):
         self.func = func
         """checks if a function ran successfully, and prints it to the 'debug.log' file"""
@@ -70,6 +71,7 @@ class Logging:
         if self.allowLogging == True: 
             self.file.write(f"\nManLog-FILE: {message}")
         else:
+            self.file.write("\nManLog-FILE - ManLogFILE is disabled, will not print.")
             pass
         
     def status(self):
@@ -83,10 +85,3 @@ class Logging:
         print(status)
         
 
-logger=Logging(allowLogging=True)
-
-logger.ManLogFile("this logs to the file directly. (if enabled)")
-
-logger.status()
-
-        
