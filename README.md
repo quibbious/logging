@@ -1,3 +1,7 @@
+# logging
+
+the logging library is a simple event logger that handles exceptions, functions (when permitted), and allows for manual logging.
+
 
 # Documentation
 
@@ -27,4 +31,4 @@ While not mentioned earlier, there is a subclass to 'Logging' called 'print'. Pr
 
 `[CRITICAL]: in most cases, its best not to ignore these`
 
-
+### WIP
