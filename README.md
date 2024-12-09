@@ -22,6 +22,7 @@ After initalizing the logger, you can use its many functions. These include:
 ### Logging.print
 
 While not mentioned earlier, there is a subclass to 'Logging' called 'print'. Print allows the user to manually print different errors to the console. These include:
+
 -Logging.print.Info(message)
 
 `[INFO]: provides general information of no severity`
