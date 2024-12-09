@@ -31,16 +31,16 @@ class Logging:
         def __init__(self):
             pass
             
-        def INFO(message):
+        def Info(message):
             print(f"\033[37m[INFO]: {message}\033[0m")
         
-        def WARNING(message):
+        def Warning(message):
             print(f"\033[33m[WARNING]: {message}\033[0m")
             
-        def ERROR(message):
+        def Error(message):
             print(f"\033[38;5;208m[ERROR]: {message}\033[0m")
             
-        def CRITICAL(message):
+        def Critical(message):
             print(f"\033[31m[CRITICAL]: {message}\033[0m")
             
     def FunctionSuccess(self, func):
@@ -62,7 +62,7 @@ class Logging:
                     self.ExceptionWriter.write(f"\nlogger: function {caller_name}() failed! - '{e}'")  
                     return False  
             else: 
-                raise Logging.print.CRITICAL(f"provided argument is not a function.")
+                raise Logging.print.Critical(f"provided argument is not a function.")
         else:
             pass
     
