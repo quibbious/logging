@@ -19,7 +19,7 @@ logger.FunctionSuccess(failAlways) #returns False, and writes " function failAlw
 # these methods can also help with the .print subclass of the Logging class.
 
 # to print an error, use Logging.print.ERROR(message), where message is the error you want to print. For example:
-Logging.print.INFO(message="provides general information of no severity")
-Logging.print.WARNING(message="maybe a function is having some issues, but it automatically fixes it") # this works without needing to initialize the 'logger' variable as well. This does not write to 'debug.log'.
-Logging.print.ERROR(message="use this if a function fails, but it's fine to continue")
-Logging.print.CRITICAL(message="in most cases, its best not to ignore these")
+Logging.print.Info(message="provides general information of no severity")
+Logging.print.Warning(message="maybe a function is having some issues, but it automatically fixes it") # this works without needing to initialize the 'logger' variable as well. This does not write to 'debug.log'.
+Logging.print.Error(message="use this if a function fails, but it's fine to continue")
+Logging.print.Critical(message="in most cases, its best not to ignore these")
