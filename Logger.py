@@ -66,12 +66,12 @@ class Logging:
         else:
             pass
     
-    def ManLogFile(self, message):
+    def UserLog(self, message):
         """allows the user to manually log messages to the 'debug.log' file. Does not log messages if flag 'allowLogging' is disabled."""
         if self.allowLogging == True: 
-            self.file.write(f"\nManLog-FILE: {message}")
+            self.file.write(f"\nUserLog: {message}")
         else:
-            self.file.write("\nManLog-FILE - ManLogFILE is disabled, will not print.")
+            self.file.write("\nUserLog - UserLog is disabled, will not print.")
             pass
         
     def status(self):
