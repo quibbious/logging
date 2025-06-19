@@ -2,7 +2,7 @@ from Logger import Logging
 
 logger=Logging(allowLogging=True) # initializes the Logging class and creates the debug.log file upon execution.
 
-logger.ManLogFile("this logs to the file directly. (if enabled)") # directly logs a message to the debug.log file.
+logger.UserLog("this logs to the file directly. (if enabled)") # directly logs a message to the debug.log file.
 
 logger.status() #prints the status of the logger.
 
